@@ -1,0 +1,20 @@
+intc.c: In function 'ck_intc_init':
+intc.c:9:34: warning: initialization of 'int *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+    9 | #define APB_BASE                 0x10000000
+      |                                  ^~~~~~~~~~
+intc.c:15:17: note: in expansion of macro 'APB_BASE'
+   15 |     int *picr = APB_BASE;
+      |                 ^~~~~~~~
+intc.c:10:34: warning: initialization of 'int *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   10 | #define INTC_BASE                0x10010000
+      |                                  ^~~~~~~~~~
+intc.c:19:22: note: in expansion of macro 'INTC_BASE'
+   19 |         int *piser = INTC_BASE + 0x10;
+      |                      ^~~~~~~~~
+vtimer.c: In function 'sim_end':
+vtimer.c:21:12: warning: assignment to 'int *' from 'unsigned int' makes pointer from integer without a cast [-Wint-conversion]
+   21 |   END_ADDR = 0xA001FF48;
+      |            ^
+vtimer.c:24:13: warning: unsigned conversion from 'long int' to 'unsigned int' changes value from '18324075042' to '1144205858' [-Woverflow]
+   24 |   END_DATA= 0x444333222;
+      |             ^~~~~~~~~~~
